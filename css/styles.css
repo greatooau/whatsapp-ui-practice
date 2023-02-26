@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #111B21;
+    --border: 1px solid;
+    --border-test: var(--border) #fff;
+    --border-test-aqua: var(--border) #15c9c0;
+    --border-test-red: var(--border) red;
+}
+
+body {
+    background-color: var(--background-color);   
+}
+
+main {
+    display: flex;
+}
+
+/** SIDEBAR */
+.sidebar {
+    border: var(--border-test);
+    flex-grow: 2;
+}
+
+/** SIDEBAR - Navigation  */
+
+.sidebar__nav {
+    border: var(--border-test-red);
+}
+
+/** PROFILE PICTURE */
+.sidebar__profile-picture {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+.sidebar__profile-picture img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    pointer-events: none;
+}
+
+/** CHAT  */
+.chat {
+    display: flex;
+    flex-grow: 1;
+    border: var(--border-test-aqua);
+    
+    height: 50vh;
+}

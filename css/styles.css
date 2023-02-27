@@ -18,18 +18,26 @@ body {
 
 main {
     display: flex;
+    width: 90%;
 }
 
 /** SIDEBAR */
 .sidebar {
     border: var(--border-test);
-    flex-grow: 2;
+    width: 40%;
 }
 
 /** SIDEBAR - Navigation  */
 
 .sidebar__nav {
     border: var(--border-test-red);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    background-color: #202C33;
+}
+
+.sidebar__nav > img {
+    border: var(--border-test);
 }
 
 /** PROFILE PICTURE */
@@ -40,6 +48,7 @@ main {
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
+    margin: 0.5rem 0.7rem;
 }
 
 .sidebar__profile-picture img {
@@ -53,7 +62,7 @@ main {
 /** CHAT  */
 .chat {
     display: flex;
-    flex-grow: 1;
+    width: 60%;
     border: var(--border-test-aqua);
     
     height: 50vh;

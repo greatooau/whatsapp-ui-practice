@@ -13,17 +13,29 @@
 <body>
     <main>
         <aside class="sidebar">
-            <nav class="sidebar__nav">
-                <figure class="sidebar__profile-picture">
+            <nav class="sidebar-nav">
+                <figure class="sidebar-nav__profile-picture circle">
                     <img height="40" width="40" src="./img/profile-picture.png" alt="profile-picture" />
                 </figure>
 
-                <img height="40" width="40" src="" alt="a">
-                <img height="40" width="40" src="" alt="a">
-                <img height="40" width="40" src="" alt="a">
-                <img height="40" width="40" src="" alt="a">
+                <img class="sidebar-nav__icon circle" title="community" src="./img/people.svg" width="25" height="25"></img>
+                <img class="sidebar-nav__icon circle" title="status" src="./img/circle.svg" width="25" height="25"></img>
+                <img class="sidebar-nav__icon circle" title="New chat" src="./img/message.svg" width="25" height="25"></img>
+                <img class="sidebar-nav__icon circle" title="Menu" src="./img/options.svg" width="25" height="25"></img>
 
             </nav>
+
+            <section class="search-area">
+                <section class="search-area__search-container" title="Search input textbox">
+                    <img class="search-area__search-icon" src="./img/magnifying-glass.svg" width="15" height="15">
+                    <form>
+                        <input type="text" class="search-area__textbox" placeholder="Search or start new chat">
+                    </form>
+                </section>
+
+                <img class="search-area__filter-icon" src="./img/filter.svg" width="30" height="30">
+            </section>
+
 
         </aside>
         <section class="chat">

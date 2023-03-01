@@ -18,7 +18,7 @@
     --border-test-red: var(--border) red;
 
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-message-sender: 
+    --sidebar-width: clamp(350px, 45%, 450px);
 }
 
 ::placeholder {
@@ -33,9 +33,11 @@ main {
     display: flex;
     width: 90%;
     min-height: 100vh;
+    border-collapse: collapse;
 }
 
-/** Image */
+
+/** General */
 
 .circle {
     border-radius: 50%;
@@ -54,9 +56,8 @@ main {
 
 /** SIDEBAR */
 .sidebar {
-    border: var(--border-test);
-    width: 45%;
-    min-width: 350px;
+    width: var(--sidebar-width);
+    border-right: var(--border) var(--c-border);
 }
 
 /** SIDEBAR - Navigation  */
@@ -67,7 +68,7 @@ main {
     column-gap: min(1rem, 2vw);
     background-color: var(--c-contrast-primary);
     height: 3.7rem;
-    padding-right: 15px;
+    padding: 0 15px 0 15px;
 }
 
 /** SIDEBAR - ICONS */
@@ -98,7 +99,7 @@ main {
 .sidebar-search-area {
     display: grid;
     grid-template-columns: 90% 10%;
-    padding: 0.3rem 0 0.3rem 0.8rem;
+    padding: 0.35rem 0 0.3rem 0.75rem;
 }
 
 .sidebar-search-area__search-container {
@@ -106,7 +107,7 @@ main {
     background-color: var(--c-contrast-primary);
     border-radius: 0.5rem;
     width: 100%;
-    height: 2.3rem;
+    height: 2.2rem;
     display: grid;
     grid-template-columns: 4rem 1fr;
     align-items: center;
@@ -147,7 +148,7 @@ main {
 .sidebar-nav__profile-picture-container {
     width: 2.5rem;
     height: 2.5rem;
-    margin: 0.5rem 0.7rem;
+    align-self: center;
 }
 
 .img--circle {
@@ -161,10 +162,19 @@ main {
 /** SIDEBAR - CHATS */
 
 .sidebar-chat {
+    --column-gap: 0.4rem;
+    --first-grid-column-width: 4.5rem;
+    --second-grid-column-width: calc(100% - var(--column-gap) - var(--first-grid-column-width));
+
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    min-height: 4.5rem;
-    column-gap: 0.5rem;
+    grid-template-columns: var(--first-grid-column-width) var(--second-grid-column-width);
+    min-height: 4.7rem;
+    column-gap: var(--column-gap);
+    cursor: pointer;
+}
+
+.sidebar-chat:hover {
+    background-color: var(--c-contrast-primary);
 }
 
 .sidebar-chat__profile-picture-container {
@@ -188,22 +198,34 @@ main {
     margin-bottom: 3px;
 }
 
+.sidebar-chat__message-container {
+    display: flex;
+}
+
 .sidebar-chat__message-text {
-    display: inline;
     --c-message-content: #8696A0;
+    display: block;
     font-family: inherit;
     font-size: 0.85rem;
     color: var(--c-message-content);
-    position: absolute;
     white-space: nowrap;
     overflow: hidden;
-    z-index: -1;
+    text-overflow: ellipsis;
 }
 
 /** CHAT  */
 .chat {
     display: flex;
-    width: 55%;
-    min-width: 100%;
-    border: var(--border) var(--c-border);
+    width: calc(100% - var(--sidebar-width));
+    border: var(--border-test);
+}
+
+.chat-nav {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
+    column-gap: min(1rem, 2vw);
+    background-color: var(--c-contrast-primary);
+    height: 3.7rem;
+    padding: 0 15px 0 15px;
+    width: 100%;
 }

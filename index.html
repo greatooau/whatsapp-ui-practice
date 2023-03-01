@@ -14,28 +14,97 @@
     <main>
         <aside class="sidebar">
             <nav class="sidebar-nav">
-                <figure class="sidebar-nav__profile-picture circle">
-                    <img height="40" width="40" src="./img/profile-picture.png" alt="profile-picture" />
+                <figure class="sidebar-nav__profile-picture-container img-container circle">
+                    <img class="img--circle" height="40" width="40" src="./img/profile-picture.png" alt="profile-picture" />
                 </figure>
 
-                <img class="sidebar-nav__icon circle" title="community" src="./img/people.svg" width="25" height="25"></img>
-                <img class="sidebar-nav__icon circle" title="status" src="./img/circle.svg" width="25" height="25"></img>
-                <img class="sidebar-nav__icon circle" title="New chat" src="./img/message.svg" width="25" height="25"></img>
-                <img class="sidebar-nav__icon circle" title="Menu" src="./img/options.svg" width="25" height="25"></img>
+                <button class="btn circle sidebar-nav__btn">
+                    <img class="sidebar-nav__icon" title="Community" src="./img/people.svg" type="">
+                </button>
 
+                <button class="btn circle sidebar-nav__btn">
+                    <img class="sidebar-nav__icon circle" title="Status" src="./img/circle.svg" type="">
+                </button>
+
+                <button class="btn circle sidebar-nav__btn">
+                    <img class="sidebar-nav__icon circle" title="New chat" src="./img/message.svg" type="">
+                </button>
+
+                <button class="btn circle sidebar-nav__btn">
+                    <img class="sidebar-nav__icon circle" title="Menu" src="./img/options.svg" type="">
+                </button>
             </nav>
 
-            <section class="search-area">
-                <section class="search-area__search-container" title="Search input textbox">
-                    <img class="search-area__search-icon" src="./img/magnifying-glass.svg" width="15" height="15">
-                    <form>
-                        <input type="text" class="search-area__textbox" placeholder="Search or start new chat">
-                    </form>
-                </section>
+            <section class="sidebar-search-area">
+                <form class="sidebar-search-area__search-container" title="Search input textbox">
+                    <img class="sidebar-search-area__search-icon" src="./img/magnifying-glass.svg" width="15" height="15">
+                    <input type="text" class="sidebar-search-area__textbox" placeholder="Search or start new chat">
+                </form>
 
-                <img class="search-area__filter-icon" src="./img/filter.svg" width="30" height="30">
+                <img class="sidebar-search-area__filter-icon" src="./img/filter.svg" width="30" height="30">
             </section>
 
+            <ul>
+                <li class="sidebar-chat">
+                    <figure class="sidebar-chat__profile-picture-container img-container circle">
+                        <img class="img--circle sidebar-chat__profile-picture" src="./img/aurora-asknes.jpg" >
+                    </figure>
+
+                    <section class="sidebar-chat__message-area">
+                        <span class="sidebar-chat__message-sender">Aurora Asknes</span>
+                        <p class="sidebar-chat__message-text">Do you want to be a friend of the cartel?</p>
+                    </section>
+                </li>
+                <li class="sidebar-chat">
+                    <figure class="sidebar-chat__profile-picture-container img-container circle">
+                        <img class="img--circle sidebar-chat__profile-picture" src="./img/kim-wexler.png" >
+                    </figure>
+
+                    <section class="sidebar-chat__message-area">
+                        <span class="sidebar-chat__message-sender">Kim</span>
+                        <img src="./img/seen.svg" width="20" height="20" alt="seen">
+                        <p class="sidebar-chat__message-text">You: It's all good man</p>
+                    </section>
+                </li>
+                <li class="sidebar-chat">
+                    <figure class="sidebar-chat__profile-picture-container img-container circle">
+                        <img class="img--circle sidebar-chat__profile-picture" src="./img/walter-white.png" >
+                    </figure>
+                    <section class="sidebar-chat__message-area">
+                        <span class="sidebar-chat__message-sender">Walter White</span>
+                        <img src="./img/seen.svg" width="20" height="20" alt="seen">
+                        <p class="sidebar-chat__message-text">You: you call anonymously</p>
+                    </section>
+                </li>
+                <li class="sidebar-chat">
+                    <figure class="sidebar-chat__profile-picture-container img-container circle">
+                        <img class="img--circle sidebar-chat__profile-picture" src="./img/mike-ehrmantraut.png" >
+                    </figure>
+                    <section class="sidebar-chat__message-area">
+                        <span class="sidebar-chat__message-sender">Mike</span>
+                        <p class="sidebar-chat__message-text">This is what's gonna happen</p>
+                    </section>
+                </li>
+                <li class="sidebar-chat">
+                    <figure class="sidebar-chat__profile-picture-container img-container circle">
+                        <img class="img--circle sidebar-chat__profile-picture" src="./img/lalo-salamanca.png" >
+                    </figure>
+                    <section class="sidebar-chat__message-area">
+                        <span class="sidebar-chat__message-sender">Lalo Salamanca</span>
+                        <p class="sidebar-chat__message-text">klah</p>
+                    </section>
+                </li>
+                <li class="sidebar-chat">
+                    <figure class="sidebar-chat__profile-picture-container img-container circle">
+                        <img class="img--circle sidebar-chat__profile-picture" src="./img/chuck-mcgill.jpg" >
+                    </figure>
+                    <section class="sidebar-chat__message-area">
+                        <span class="sidebar-chat__message-sender">Chuck</span>
+                        <img src="./img/seen.svg" width="20" height="20" alt="seen">
+                        <p class="sidebar-chat__message-text">You: Tell me why</p>
+                    </section>
+                </li>
+            </ul>
 
         </aside>
         <section class="chat">
